@@ -1,0 +1,146 @@
+.container {
+  margin-top: 15rem;
+  display: flex;
+  margin-bottom: 5rem;
+}
+.left {
+  flex: 2;
+}
+.right {
+  flex: 1;
+}
+.table {
+  width: 100%;
+  width: 90%;
+  border-spacing: 2rem;
+
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  padding: 2em;
+}
+.trItem {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.tr {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.trItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: rgb(80, 79, 79);
+}
+.inProgress {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.3rem;
+  animation: inProgress 1s ease infinite alternate;
+}
+.done {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+.undone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.3rem;
+  opacity: 0.3;
+}
+.checkIcon {
+  height: 2.4rem;
+  width: 2.4rem;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -2.6rem;
+}
+.checkIcon img {
+  max-width: 100%;
+}
+.undone .checkIcon,
+.inProgress .checkIcon {
+  display: none;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.row:nth-child(2) {
+  max-width: 80%;
+  padding: 0 2em;
+}
+.statusImg {
+  max-width: 100%;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+@keyframes inProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .table .tr:first-child {
+    display: none;
+  }
+  .table .tr {
+    flex-direction: column;
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+  }
+  .id::before {
+    content: "Order id:  ";
+    color: rgb(222, 44, 5);
+  }
+  .name::before {
+    content: "Name:  ";
+    color: rgb(222, 44, 5);
+  }
+  .address::before {
+    content: "Address:  ";
+    color: rgb(222, 44, 5);
+  }
+  .total::before {
+    content: "Total:  ";
+    color: rgb(222, 44, 5);
+  }
+}
+.id {
+  font-size: 1.2rem;
+  flex: 1;
+}
+.trItem:first-child {
+  flex: 1;
+}

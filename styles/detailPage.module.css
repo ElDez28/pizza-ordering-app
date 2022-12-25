@@ -1,0 +1,142 @@
+.container {
+  height: 100vh;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+}
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+.imgContainer {
+  max-width: 100%;
+}
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  flex: 1;
+  padding: 2rem;
+}
+.title {
+  font-size: 2.4rem;
+  color: rgb(85, 85, 85);
+}
+.price {
+  color: #d1411e;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.desc {
+  font-size: 1.6rem;
+  width: 80%;
+}
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  align-items: stretch;
+}
+.size {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.size:nth-child(1) {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.size:nth-child(2) {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+.size:nth-child(3) {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+.size img {
+  width: 100%;
+}
+.number {
+  position: absolute;
+  top: -0.2rem;
+  right: -2.5rem;
+
+  background-color: rgb(17, 111, 95);
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 10px;
+}
+
+.ingredients {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 4rem;
+}
+.option {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.choose {
+  font-size: 2.4rem;
+  color: rgb(85, 85, 85);
+}
+.checkbox {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.quantity {
+  width: 5rem;
+  height: 3rem;
+  outline: none;
+  text-align: center;
+}
+.button {
+  height: 3rem;
+  margin-left: 2rem;
+  background-color: transparent;
+  color: #d1411e;
+  border: 1px solid #d1411e;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d1411e;
+  color: white;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 2em 0;
+  }
+  .right {
+    text-align: center;
+  }
+  .desc {
+    width: 100%;
+    text-align: center;
+  }
+  .sizes {
+    width: 100%;
+    justify-content: center;
+    gap: 6rem;
+  }
+  .ingredients {
+    width: 100%;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2rem;
+  }
+}

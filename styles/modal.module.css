@@ -1,0 +1,123 @@
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.837);
+  transform: translateY(-10rem);
+}
+.wrapper {
+  width: 40%;
+
+  margin-left: 30%;
+  background-color: white;
+  z-index: 999;
+  border-radius: 10px;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+.inputItem {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  font-size: 1.4rem;
+  margin-bottom: 1em;
+}
+.inputItem label {
+  margin-bottom: 0.5em;
+}
+.inputItem input {
+  padding: 0.5em;
+  outline: none;
+  border-radius: 5px;
+  border: 0.5px solid gray;
+}
+.inputItem:nth-child(6) {
+  margin-bottom: 2em;
+}
+.cancelBtn {
+  background-color: brown;
+  color: white;
+  padding: 0.8em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+.submitBtn {
+  padding: 0.8em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: teal;
+}
+.file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.file::before {
+  content: "Select image";
+  display: inline-block;
+  background: brown;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+
+  cursor: pointer;
+  color: white;
+
+  font-size: 10pt;
+}
+.prices {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.extras {
+  display: flex;
+  flex-direction: column;
+}
+.extraItemInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.extraItem {
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(221, 80, 80);
+  color: white;
+  max-width: 100%;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  align-items: center;
+  cursor: pointer;
+}
+.extraWrapper {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+}
+.extraWrapper p {
+  margin: 0;
+  padding: 0;
+}
+.prices input {
+  max-width: 30%;
+}
+@media screen and (max-width: 1201px) {
+  .prices {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .prices input {
+    max-width: 100%;
+  }
+}

@@ -1,6 +1,9 @@
-/** @type {import('next').NextConfig} */
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 const nextConfig = {
-  reactStrictMode: true,
-}
+  env: {
+    BACKEND_URL: process.env.BACKEND_URL,
+    SHORT_URL: process.env.SHORT_URL,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

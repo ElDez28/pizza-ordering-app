@@ -1,0 +1,102 @@
+.navbar {
+  height: 10rem;
+  padding: 0 5em;
+  background-color: #d1411e;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.8rem;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  flex: 1;
+  gap: 1em;
+}
+.item:nth-child(2) {
+  flex: 3;
+}
+.callButton {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.8em;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  font-family: "Lobster", cursive;
+  font-size: 4.4rem;
+}
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+.list a {
+  text-decoration: none;
+  color: white;
+}
+.listItem {
+  cursor: pointer;
+}
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+.btn {
+  padding: 1em;
+  background-color: white;
+  border-radius: 10px;
+
+  border: none;
+  color: #d1411e;
+  cursor: pointer;
+}
+.bubble {
+  position: absolute;
+  font-size: 1.2rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  top: 0;
+  right: -1rem;
+  background-color: white;
+  color: #d1411e;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.textTwo {
+  font-weight: 800;
+}
+@media screen and (max-width: 481px) {
+  .item:nth-child(2) {
+    display: none;
+  }
+  .texts {
+    font-size: 1.4rem;
+  }
+  .cart img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .callButton img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
