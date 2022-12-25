@@ -15,7 +15,7 @@ const AdminPage = (props) => {
   const [orders, setOrders] = useState(props.orders);
   const [isOpen, setIsOpen] = useState(false);
   const [currentProduct, setCurrentProduct] = useState({});
-
+  const [currentStatus, setCurrentStatus] = useState(0);
   const status = ["preparing", "on the way", "delivered"];
   const updateProduct = (updatedProduct) => {
     const targetedItem = products.find(
@@ -64,7 +64,10 @@ const AdminPage = (props) => {
       const updatedOrder = res.data.data;
 
       const index = orders.indexOf(targetedItem);
-      orders.splice(index, 1, updatedOrder);
+
+      const newArray = [...orders];
+      newArray[index] = updatedOrder;
+      setOrders(newArray);
     } catch (err) {
       console.log(err);
     }
