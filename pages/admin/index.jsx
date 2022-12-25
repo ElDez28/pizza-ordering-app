@@ -6,7 +6,6 @@ import Modal from "../../components/Modal";
 import { adminActions } from "../../store/cart";
 import { useDispatch } from "react-redux";
 import Product from "../../models/ProductModel";
-import { getProducts } from "../../helpers/api-util";
 
 const AdminPage = (props) => {
   const dispatch = useDispatch();

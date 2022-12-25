@@ -13,9 +13,8 @@ const LoginPage = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios(`${process.env.BACKEND_URL}/login`, {
+      await axios(`${process.env.BACKEND_URL}/login`, {
         method: "post",
-
         data: {
           username,
           password,
@@ -28,7 +27,8 @@ const LoginPage = () => {
       dispatch(adminActions.setAdmin(true));
       router.replace("/admin");
     } catch (err) {
-      setError(err.response.data);
+      console.log(err);
+      setError("Invalid credentials");
     }
   };
   return (

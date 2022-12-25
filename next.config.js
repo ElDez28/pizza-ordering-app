@@ -3,6 +3,8 @@ const nextConfig = {
   env: {
     BACKEND_URL: process.env.BACKEND_URL,
     SHORT_URL: process.env.SHORT_URL,
+    ADMIN: process.env.ADMIN,
+    PASSWORD: process.env.PASSWORD,
   },
 };
 
