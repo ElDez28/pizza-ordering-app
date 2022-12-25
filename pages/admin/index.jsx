@@ -6,6 +6,8 @@ import Modal from "../../components/Modal";
 import { adminActions } from "../../store/cart";
 import { useDispatch } from "react-redux";
 import Product from "../../models/ProductModel";
+import Order from "../../models/OrderModel";
+import dbConnect from "../../lib/connection";
 
 const AdminPage = (props) => {
   const dispatch = useDispatch();
@@ -208,18 +210,17 @@ export async function getServerSideProps({ req }) {
     };
   }
   admin = true;
-
-  const productData = await axios.get(`${process.env.BACKEND_URL}/products`);
-  const ordersData = await axios.get(`${process.env.BACKEND_URL}/orders`);
-  const products = productData.data.data;
-  const orders = ordersData.data.data;
+  await dbConnect();
+  const response = await Product.find();
+  const productData = JSON.parse(JSON.stringify(response));
+  const response2 = await Order.find();
+  const orderData = JSON.parse(JSON.stringify(response2));
 
   return {
     props: {
-      products,
-      orders,
+      products: productData,
+      orders: orderData,
       admin,
-      token,
     },
   };
 }
