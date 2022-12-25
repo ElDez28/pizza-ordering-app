@@ -31,15 +31,11 @@ const handler = async (req, res) => {
   if (method === "DELETE") {
     try {
       await Order.findByIdAndDelete(id);
-      res
-        .status(200)
-        .json({
-          message: "Data successfully deleted",
-        })
-        .end();
+      res.status(200).json({
+        message: "Data successfully deleted",
+      });
     } catch (err) {
       res.status(500).json(err);
-      res.end();
     }
   }
   if (method === "PATCH") {

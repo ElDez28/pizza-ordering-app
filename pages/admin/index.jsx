@@ -39,7 +39,8 @@ const AdminPage = (props) => {
       await axios(`${process.env.BACKEND_URL}/orders/${id}`, {
         method: "delete",
       });
-      setOrders((prev) => prev.filter((item) => item._id !== id));
+      const newArray = orders.filter((item) => item._id !== id);
+      setOrders(newArray);
     } catch (err) {
       console.log(err);
     }
@@ -77,7 +78,8 @@ const AdminPage = (props) => {
       await axios(`${process.env.BACKEND_URL}/products/${id}`, {
         method: "delete",
       });
-      setProducts((prev) => prev.filter((item) => item._id !== id));
+      const newArray = products.filter((item) => item._id !== id);
+      setProducts(newArray);
     } catch (err) {
       console.log(err);
     }
