@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { adminActions, orderActions, sizeActions } from "../../store/cart";
 import dbConnect from "../../lib/connection";
 import Product from "../../models/ProductModel";
+import { getAllProducts } from "../../lib/getAllProducts";
 const DetailPage = ({ product }) => {
   const dispatch = useDispatch();
 
