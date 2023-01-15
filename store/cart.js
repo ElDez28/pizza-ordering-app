@@ -41,8 +41,9 @@ const orderSlice = createSlice({
           ...filteredState,
           {
             ...existingOrder,
-            quantity: Number(existingOrder.quantity) + action.payload.quantity,
-            total: Number(existingOrder.total) + action.payload.total,
+            quantity:
+              Number(existingOrder.quantity) + Number(action.payload.quantity),
+            total: Number(existingOrder.total) + Number(action.payload.total),
           },
         ];
       } else {
